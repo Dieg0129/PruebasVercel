@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Suma</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/layout.css')}}">
+</head>
+<body>
+
+    <div class="resultados">
+        <div class="resultado">
+            <p class="etiqueta1">Global:</p>
+            <p class="valor">{{ formulario6 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta2">Resultado:</p>
+            <p class="valor">{{ resultado }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta1">Sociales:</p>
+            <p class="valor">{{ formulario1 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta2">Resultado:</p>
+            <p class="valor">{{ resultado2 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta1">Matematicas:</p>
+            <p class="valor">{{ formulario2 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta2">Resultado:</p>
+            <p class="valor">{{ resultado3 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta1">Lectura Critica:</p>
+            <p class="valor">{{ formulario3 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta2">Resultado:</p>
+            <p class="valor">{{ resultado4 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta1">Ingles:</p>
+            <p class="valor">{{ formulario4 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta2">Resultado:</p>
+            <p class="valor">{{ resultado5 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta1">Ciencias Naturales:</p>
+            <p class="valor">{{ formulario5 }}</p>
+        </div>
+        <div class="resultado">
+            <p class="etiqueta2">Resultado:</p>
+            <p class="valor">{{ resultado6 }}</p>
+        </div>
+    </div>
+
+<div class="button-container">
+    <a href="{{ url_for('index') }}" class="regresar">Regresar</a>
+    
+</div>
+
+<div class="button-container2">
+    <a href="{{url_for('index2')}}" class="regresar">Grafica</a>
+    
+</div>
+
+
+
+</body>
+</html>

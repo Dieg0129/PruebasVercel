@@ -3,15 +3,71 @@
 {% block title %} {{data.titulo}} {% endblock %} 
 
 {% block body %} 
+
+<div class="center">
     <h1>{{data.bienvenida}}</h1>
-    {% if data.numero_cursos > 0 %}
-        <ul>
-            {% for c in data.cursos %}
-                <li>{{c}}</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <h2>No existen cursos...</h2>
-    {% endif %}
+
+    <form action="{{ url_for('promedio') }}" method="post">
+        <div class="inputbox">
+            <label>Ingrese su puntaje en Sociales y Ciudadanas:</label> 
+            <input type="text" id="formulario1" name="formulario1" required>
+               
+        </div>
+
+        <div class="inputbox">
+            <label>Ingrese su puntaje en Matemáticas:</label>
+            <input type="text" id="formulario2" name="formulario2" required>
+            
+        </div>
+        <div class="inputbox">
+            <label>Ingrese su puntaje en Lectura Crítica:</label>
+            <input type="text" id="formulario3" name="formulario3" required>
+            
+        </div>
+        <div class="inputbox">
+            <label>Ingrese su puntaje en Inglés:</label>
+            <input type="text" id="formulario4" name="formulario4" required>
+            
+        </div>
+        <div class="inputbox">
+            <Label>Ingrese su puntaje en Ciencias Naturales:</label>
+            <input type="text" id="formulario5" name="formulario5" required>
+            
+        </div>
+        <div class="inputbox">
+            <label>Ingrese su Puntaje Global:</label>
+            <input type="text" id="formulario6" name="formulario6" required>
+            
+        </div>
+        <div class="button-container"> <!-- Nuevo contenedor para los botones -->
+            <input class="enviar" type="submit" id="enviarButton" value="Enviar">
+            <input class="reset" type="reset" id="cancelarButton" value="Cancelar">
+        </div>
+    </form>
+    
+    <script src="{{url_for('static', filename= 'js/layout.js')}}"> </script>
+
+
+
+
+</div>
+    
 {% endblock %}
 
+    
+<div class="center">
+    
+    <form>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>Email</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required">
+        <span>Password</span>
+      </div>
+      <div class="inputbox">
+        <input type="button" value="submit">
+      </div>
+    </form>
+  </div>

@@ -6,11 +6,11 @@
     <title>{% block title %} {% endblock %} </title>
     <link rel="stylesheet" href="{{url_for('static', filename= 'css/layout.css')}}">
 </head>
-<body>
+<body class="custom-background">
     {% block body %} 
     {% endblock %}
 
     <script src="{{url_for('static', filename= 'js/layout.js')}}"> </script>
     
 </body>
-</html>
+</html> 
